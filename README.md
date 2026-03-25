@@ -1,23 +1,71 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A bold, modern fullstack developer portfolio built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 **Bold Design** - Vibrant blue-to-purple gradient aesthetic
+- 📱 **Responsive** - Mobile-first design that works on all devices  
+- ⚡ **Fast** - Optimized production build with Vite
+- 🎯 **4 Complete Pages** - Home hero, Projects showcase, Experience timeline, Resume
+- 🧭 **Navigation** - Sticky nav with mobile menu
+- ✨ **Animations** - Smooth transitions and micro-interactions
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19.2.0 + TypeScript
+- Tailwind CSS v4
+- React Router v7
+- Vite + ESLint
+- Lucide React icons
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+npm install          # Install dependencies
+npm run dev         # Start dev server (http://localhost:5173/portfolio/)
+npm run build       # Build for production
+npm run deploy      # Deploy to GitHub Pages
+npm run lint        # Check code quality
+```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
+## Project Structure
+
+```
+src/
+├── Home.tsx                 # Home/hero page
+├── main.tsx                 # App entry with routing
+├── index.css               # Tailwind CSS styles
+├── components/
+│   ├── Navigation.tsx      # Sticky navigation
+│   ├── Layout.tsx          # Page wrapper
+│   └── Footer.tsx          # Contact footer
+└── pages/
+    ├── Projects.tsx        # Projects showcase
+    ├── Experience.tsx      # Timeline + skills
+    └── Resume.tsx          # Resume page
+```
+
+## Customization
+
+Update these files with your content:
+
+- `src/pages/Projects.tsx` - Your actual projects
+- `src/pages/Experience.tsx` - Your work history
+- `src/pages/Resume.tsx` - Your qualifications  
+- `src/components/Footer.tsx` - Your contact info
+- `public/resume.pdf` - Your resume file
+
+## Live
+
+🌐 [https://dhruv0321.github.io/portfolio/](https://dhruv0321.github.io/portfolio/)
+
+## Build Specs
+
+- JavaScript: 253KB (79.60KB gzipped)
+- CSS: 34KB (5.84KB gzipped)
+- TypeScript: 100% type-safe
+- ESLint: Zero errors
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
