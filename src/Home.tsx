@@ -19,7 +19,7 @@ export default function Home() {
             {/* Intro Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/10 border border-blue-600/20 backdrop-blur-sm">
               <Zap size={16} className="text-blue-400" />
-              <span className="text-sm font-medium text-blue-300">Fullstack Developer</span>
+              <span className="text-sm font-medium text-blue-300">Full Stack Developer</span>
             </div>
 
             {/* Main Heading */}
@@ -29,7 +29,7 @@ export default function Home() {
 
             {/* Subtitle */}
             <p className="text-xl sm:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              Software Developer 2 crafting beautiful, performant applications across the full stack. React, Node.js, TypeScript, and cloud technologies.
+              Full Stack Developer with 3+ years building scalable backend systems and performant frontend applications. Promoted to SDE-II within 3 years.
             </p>
 
             {/* CTA Buttons */}
@@ -41,7 +41,7 @@ export default function Home() {
                 View My Work <ArrowRight size={20} />
               </Link>
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:contact@dhruvarora.co.in"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-lg border-2 border-slate-400 text-slate-100 font-semibold hover:bg-slate-900 hover:border-blue-400 transition-all"
               >
                 Get In Touch
@@ -49,19 +49,19 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Stats/Skills Preview */}
+          {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-20 pt-20 border-t border-slate-700/50">
             <div>
-              <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">5+</div>
+              <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">3+</div>
               <p className="text-slate-400 text-sm mt-2">Years Experience</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">20+</div>
-              <p className="text-slate-400 text-sm mt-2">Projects Shipped</p>
+              <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">2</div>
+              <p className="text-slate-400 text-sm mt-2">Major Products Built</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text">100%</div>
-              <p className="text-slate-400 text-sm mt-2">Client Satisfaction</p>
+              <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text">1</div>
+              <p className="text-slate-400 text-sm mt-2">Published Research</p>
             </div>
           </div>
         </div>
@@ -74,13 +74,13 @@ export default function Home() {
             <div>
               <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">Full Stack Developer</h2>
               <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                I specialize in building scalable web applications with modern technologies. From React frontends to Node.js backends, I deliver solutions that are both beautiful and robust.
+                I specialise in building scalable backend systems and performant frontend applications — from native macOS system integrations to real-time collaborative platforms. Currently at Mercer Mettl as Software Developer II.
               </p>
               <div className="flex items-start gap-4">
                 <Code className="text-blue-600 flex-shrink-0 mt-1" size={24} />
                 <div>
-                  <h3 className="font-semibold text-slate-900 dark:text-white">Tech Stack</h3>
-                  <p className="text-slate-600 dark:text-slate-400">React, TypeScript, Node.js, AWS, Docker, PostgreSQL</p>
+                  <h3 className="font-semibold text-slate-900 dark:text-white">Core Stack</h3>
+                  <p className="text-slate-600 dark:text-slate-400">Java, Spring Boot, React, TypeScript, ElectronJS, PostgreSQL, Redis</p>
                 </div>
               </div>
             </div>

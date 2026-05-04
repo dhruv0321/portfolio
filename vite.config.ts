@@ -9,6 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      'framepack': path.resolve(__dirname, '../framepack/src/index.ts'),
     },
   },
 })

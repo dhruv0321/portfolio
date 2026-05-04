@@ -27,7 +27,8 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "framepack": ["../framepack/src/index.ts"]
     }
   },
   "include": ["src"]
