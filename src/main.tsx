@@ -1,20 +1,27 @@
+import { lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import { HashRouter, Route, Routes } from "react-router";
 import './index.css'
-import Home from './Home';
-import Projects from './pages/Projects';
-import Experience from './pages/Experience';
-import Resume from './pages/Resume';
-import FramepackDemo from './pages/FramepackDemo';
+import PageLoader from './components/PageLoader';
+import ScrollToTop from './components/ScrollToTop';
+
+const Home = lazy(() => import('./Home'));
+const Projects = lazy(() => import('./pages/Projects'));
+const Experience = lazy(() => import('./pages/Experience'));
+const Resume = lazy(() => import('./pages/Resume'));
+const FramepackDemo = lazy(() => import('./pages/FramepackDemo'));
 
 createRoot(document.getElementById('root')!).render(
-    <HashRouter>
-		<Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="/projects" element={<Projects />} />
-			<Route path="/experience" element={<Experience />} />
-			<Route path="/resume" element={<Resume />} />
-			<Route path="/framepack" element={<FramepackDemo />} />
-		</Routes>
-    </HashRouter>
+  <HashRouter>
+    <ScrollToTop />
+    <Suspense fallback={<PageLoader />}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/framepack" element={<FramepackDemo />} />
+      </Routes>
+    </Suspense>
+  </HashRouter>
 )

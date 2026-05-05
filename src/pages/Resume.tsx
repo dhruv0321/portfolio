@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { Download, ChevronLeft, ChevronRight } from 'lucide-react';
 import Layout from '../components/Layout';
@@ -15,6 +15,11 @@ const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`;
 export default function Resume() {
   const [numPages, setNumPages] = useState<number>(0);
   const [pageNumber, setPageNumber] = useState(1);
+  const pdfRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    pdfRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [pageNumber]);
 
   return (
     <Layout>
@@ -38,7 +43,7 @@ export default function Resume() {
             </a>
           </div>
 
-          <div className="bg-white dark:bg-slate-900 rounded-2xl border-2 border-slate-200 dark:border-slate-700 overflow-hidden shadow-2xl flex flex-col items-center py-6">
+          <div ref={pdfRef} className="bg-white dark:bg-slate-900 rounded-2xl border-2 border-slate-200 dark:border-slate-700 overflow-hidden shadow-2xl flex flex-col items-center py-6">
             <Document
               file={resumeUrl}
               onLoadSuccess={({ numPages }) => setNumPages(numPages)}
